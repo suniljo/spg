@@ -22,6 +22,9 @@ public class ThreadTest1 {
 		ct.start();
 		
 		System.out.println("no of active threads = " + Thread.activeCount());
+		
+		var n = 10;
+		System.out.println(n);
 	}
 
 }
