@@ -1,0 +1,37 @@
+java.util.Optional
+
+- new feature integrated in Java 8
+- used to deal with NullPointerException in Java application
+- The Optional class in Java 8 is a container object that may or may not contain a non-null value. It was introduced to address the problem of NullPointerExceptions and promote more robust and readable code by explicitly handling the potential absence of a value.
+
+
+Creating Optional Instances:
+
+1. Optional.empty(): Creates an empty Optional instance.
+2. Optional.of(T value): Creates an Optional containing the specified non-null value. Throws NullPointerException if value is null.
+3. Optional.ofNullable(T value): Creates an Optional containing the specified value if it's non-null, otherwise returns an empty Optional.
+
+
+refer methods of java.util.Optional
+
+		String[] names = new String[10];
+		/*
+		System.out.println(names[0]);
+		System.out.println(names[0].length());
+		*/
+		
+		Optional<String> opt = Optional.empty();
+		System.out.println(opt);
+		System.out.println(opt.isEmpty()); //true
+		System.out.println(opt.isPresent()); //false
+		
+		opt = Optional.of("Java");
+		System.out.println(opt);
+		System.out.println(opt.isEmpty()); //false
+		System.out.println(opt.isPresent()); //true
+		if(opt.isPresent()) {
+			String str = opt.get();
+			System.out.println(str);
+		}	
+
+
