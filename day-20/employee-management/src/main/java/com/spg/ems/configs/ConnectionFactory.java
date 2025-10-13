@@ -1,4 +1,4 @@
-package com.spg.java.jdbc;
+package com.spg.ems.configs;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -7,7 +7,7 @@ import java.util.ResourceBundle;
 public class ConnectionFactory {
 
 	public static Connection getDBConnection() throws Exception{
-		ResourceBundle bundle = ResourceBundle.getBundle("com/spg/java/jdbc/dbconfig");
+		ResourceBundle bundle = ResourceBundle.getBundle("dbconfig");
 		
 		String dc = bundle.getString("driverclassname");
 		String url = bundle.getString("url");
