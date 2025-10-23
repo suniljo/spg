@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- value as an attribute -->  
+    <bean id="user1" class="com.spg.spring.core.beans.User">
+    	<property name="firstName" value="Vinod"/>
+    	<property name="lastName" value="Vellanki"/>
+    </bean>  
+    
+    <!-- value as an element -->  
+    <bean id="user2" class="com.spg.spring.core.beans.User">
+    	<property name="firstName"> 
+    	    <value>Abhilash</value>
+    	</property>    
+    	<property name="lastName"> 
+    	    <value>Pasham</value>
+    	</property>    
+    </bean>  
+    
+    <!-- value through name-spaces -->    
+    <bean id="user3" class="com.spg.spring.core.beans.User" p:firstName="Varalakshmi" p:lastName="Bommireddy" />
+    
+    <bean id="user4" class="com.spg.spring.core.beans.User">
+    	<constructor-arg value="Imran"></constructor-arg>
+    	<constructor-arg value="beig"></constructor-arg>
+    </bean>
+</beans>        
