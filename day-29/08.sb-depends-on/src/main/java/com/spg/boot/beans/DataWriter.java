@@ -1,0 +1,11 @@
+package com.spg.boot.beans;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class DataWriter {
+
+	public DataWriter() {
+		System.out.println("DataWriter - constructor");
+	}	
+}
