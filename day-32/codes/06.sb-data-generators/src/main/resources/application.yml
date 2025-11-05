@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: 06.sb-data-generators
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_spg
+    username: root
+    password: root
+  jpa:
+    show_sql: true
+    hibernate:
+      ddl-auto: update

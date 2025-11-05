@@ -1,0 +1,8 @@
+Relationships / Associations / Mappings in Data JPA
+
+1. one-to-one mapping
+2. one-to-many mapping
+3. many-to-many mapping
+
+---> uni-directional
+---> bi-directional
