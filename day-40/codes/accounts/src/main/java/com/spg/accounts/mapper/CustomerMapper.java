@@ -1,5 +1,6 @@
 package com.spg.accounts.mapper;
 
+import com.spg.accounts.dto.CustomerDetailsDto;
 import com.spg.accounts.dto.CustomerDto;
 import com.spg.accounts.entities.Customer;
 
@@ -17,5 +18,13 @@ public class CustomerMapper {
         customer.setMobileNumber(customerDto.getMobileNumber());
         return customer;
     }
+
+	public static CustomerDetailsDto mapToCustomerDetailsDto(Customer customer, CustomerDetailsDto customerDetailsDto) {
+		customerDetailsDto.setName(customer.getName());
+		customerDetailsDto.setEmail(customer.getEmail());
+        customerDetailsDto.setMobileNumber(customer.getMobileNumber());
+        
+        return customerDetailsDto;
+	}
 
 }
